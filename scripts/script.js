@@ -19,6 +19,9 @@ let boundaries = document.querySelectorAll(".boundary");
 for (let i = 0; i < boundaries.length; i++) {
   boundaries[i].addEventListener("mouseenter", function (){
     if (gameStarted && !gameOver) {
+        for(let j=0;j<boundaries.length;j++){
+            boundaries[j].classList.add("highlighted")
+        } 
       document.getElementById("status").textContent = "game over :(";
       gameOver = true;
     }
