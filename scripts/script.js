@@ -13,8 +13,13 @@ document.getElementById("end").addEventListener("mouseenter", function () {
         gameOver = true;
         document.getElementById("status").textContent ="you reached the end ^-^";
         document.querySelectorAll(".boundary");
-    }
-});
+        let boundaries = document.querySelectorAll(".boundary");
+        for (let i = 0; i < boundaries.length; i++) {
+             boundaries[i].style.backgroundColor = "green";
+            }
+        }
+    });
+    
 let boundaries = document.querySelectorAll(".boundary");
 for (let i = 0; i < boundaries.length; i++) {
   boundaries[i].addEventListener("mouseenter", function (){
